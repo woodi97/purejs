@@ -1,6 +1,6 @@
-export function useCopy(src: Object) {
+export function useCopy(src) {
   return Object.create(
     Object.getPrototypeOf(src),
-    Object.getOwnPropertyDescriptors(src)
+    Object.getOwnPropertyDescriptors(src),
   );
 }

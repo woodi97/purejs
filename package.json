@@ -12,6 +12,8 @@
   },
   "scripts": {
     "prepare": "husky install",
+    "lint-fix": "eslint --fix",
+    "lint-fix-prod": "cross-env NODE_ENV=production eslint --fix",
     "tsc:w": "tsc -w --outDir ./public/js",
     "build": "cross-env NODE_ENV=production webpack --mode=production",
     "build:dev": "cross-env NODE_ENV=development webpack --mode=development",
@@ -21,7 +23,7 @@
   "lint-staged": {
     "*.{js,ts}": [
       "prettier --write",
-      "eslint --fix"
+      "yarn lint-fix-prod"
     ]
   },
   "dependencies": {
