@@ -1,11 +1,26 @@
 {
   "compilerOptions": {
     "outDir": "./public/js",
+    "sourceMap": true,
     "allowJs": true,
     "target": "es5",
     "module": "es6",
     "moduleResolution": "node",
-    "baseUrl": "./src"
+    "baseUrl": ".",
+    "paths": {
+      "@src/*": ["./src/*"],
+      "@core/*": ["./src/core/*"],
+      "@containers/*": ["./src/containers/*"],
+      "@components/*": ["./src/components/*"],
+      "@context/*": ["./src/context"],
+      "@api/*": ["./src/core/api/*"],
+      "@data/*": ["./src/core/data/*"],
+      "@interface/*": ["./src/core/interface/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@pages/*": ["./src/pagaes/*"],
+      "@css/*": ["./src/css/*"],
+      "@utils/*": ["./src/utils/*"]
+    }
   },
   "include": ["src/**/*.ts", "src/**/*.js"]
 }

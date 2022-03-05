@@ -17,6 +17,20 @@ module.exports = {
     ],
   },
   resolve: {
+    alias: {
+      "@src": path.resolve(__dirname, "./src/"),
+      "@core": path.resolve(__dirname, "./src/core/"),
+      "@containers": path.resolve(__dirname, "./src/containers/"),
+      "@components": path.resolve(__dirname, "./src/components/"),
+      "@context": path.resolve(__dirname, "./src/context"),
+      "@api": path.resolve(__dirname, "./src/core/api/"),
+      "@data": path.resolve(__dirname, "./src/core/data/"),
+      "@interface": path.resolve(__dirname, "./src/core/interface/"),
+      "@hooks": path.resolve(__dirname, "./src/hooks/"),
+      "@pages": path.resolve(__dirname, "./src/pagaes/"),
+      "@css": path.resolve(__dirname, "./src/css/"),
+      "@utils": path.resolve(__dirname, "./src/utils/"),
+    },
     extensions: [".ts", ".js"],
   },
   // HthmlWebpackPlugin: generate index.html which is including bundle.js using template
