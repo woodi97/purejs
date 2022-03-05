@@ -2,7 +2,7 @@
   "name": "sentry",
   "version": "0.1.0",
   "description": "frontend boilerplate support component based dev",
-  "main": "src/index.js",
+  "main": "src/main.ts",
   "scripts": {
     "tsc:w": "tsc -w --outDir ./public/js",
     "build": "webpack --mode=production",
