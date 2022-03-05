@@ -1,4 +1,4 @@
-# template.vanilla
+# sentry
 
 ## `Warning`
 

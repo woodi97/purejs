@@ -1,7 +1,7 @@
 {
-  "name": "vanilla_icecream",
-  "version": "1.0.0",
-  "description": "Boilerplate using VanillaTS",
+  "name": "sentry",
+  "version": "0.1.0",
+  "description": "frontend boilerplate support component based dev",
   "main": "src/index.js",
   "scripts": {
     "tsc:w": "tsc -w --outDir ./public/js",
