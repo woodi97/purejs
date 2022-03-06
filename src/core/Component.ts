@@ -1,6 +1,7 @@
+/* eslint-disable @typescript-eslint/no-empty-function */
+/* eslint-disable @typescript-eslint/ban-types */
 export class Component {
   $target;
-  // props for parent to child communication
   $props;
   $state;
   constructor($target: HTMLElement, $props: {}) {
@@ -8,28 +9,28 @@ export class Component {
     this.$props = $props;
     this.setup();
     this.setEvent();
-    this.render();
+    this._draw();
   }
   setup() {}
   // children components should be mounted in this method
   mounted() {}
-  template() {
-    return "";
-  }
   render() {
-    this.$target.innerHTML = this.template();
+    return '';
+  }
+  _draw() {
+    this.$target.innerHTML = this.render();
     this.mounted();
   }
 
   setEvent() {}
   setState(newState: {}) {
     this.$state = { ...this.$state, ...newState };
-    this.render();
+    this._draw();
   }
   addEvent(
     eventType: keyof GlobalEventHandlersEventMap,
     selector: string,
-    callback: (e) => void
+    callback: (e) => void,
   ) {
     const children = [...this.$target.querySelectorAll(selector)];
     // if there are deep element inside selected element,

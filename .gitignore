@@ -6,3 +6,4 @@ dist
 
 # yarn files
 yarn-error.log
+.eslintcache

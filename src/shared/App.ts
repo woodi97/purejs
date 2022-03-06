@@ -1,3 +1,4 @@
+import { PageHeader } from '@src/components/common';
 import { ItemAppender, ItemFilter, Items } from '@src/components/common/Items';
 import { Component } from '@src/core/Component';
 
@@ -20,8 +21,9 @@ export default class App extends Component {
     };
   }
 
-  template() {
+  render() {
     return `
+      <div class="page-header"></div>
       <header data-component="item-appender"></header>
       <main data-component="items"></main>
       <footer data-component="item-filter"></footer>
@@ -30,6 +32,7 @@ export default class App extends Component {
 
   mounted() {
     const { filteredItems, addItem, deleteItem, toggleItem, filterItem } = this;
+    const $pageHeader = this.$target.querySelector('.page-header');
     const $itemAppender = this.$target.querySelector(
       '[data-component="item-appender"]',
     );
@@ -40,6 +43,7 @@ export default class App extends Component {
 
     // valid scope of *this in function is inside of function
     // so, use bind() to bind this to function
+    new PageHeader($pageHeader, {});
     new ItemAppender($itemAppender, {
       addItem: addItem.bind(this),
     });

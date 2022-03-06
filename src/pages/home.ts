@@ -20,7 +20,7 @@ export default class HomePage extends Component {
     };
   }
 
-  template() {
+  render() {
     return `
       <header data-component="item-appender"></header>
       <main data-component="items"></main>
