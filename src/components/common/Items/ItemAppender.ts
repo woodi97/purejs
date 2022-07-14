@@ -1,4 +1,4 @@
-import { Component } from '@core/Component';
+import { Component } from '@src/core/Component';
 
 export default class ItemAppender extends Component {
   render() {

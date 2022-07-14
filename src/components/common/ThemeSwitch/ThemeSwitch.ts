@@ -1,7 +1,7 @@
 import { Component } from '@src/core/Component';
-import './PageHeader.scss';
+import './ThemeSwitch.scss';
 
-export default class PageHeader extends Component {
+export default class ThemeSwitch extends Component {
   render() {
     return `
     <div class="theme-switch-wrapper">
@@ -22,6 +22,7 @@ export default class PageHeader extends Component {
         document.documentElement.setAttribute('data-theme', 'light');
       }
     }
+
     this.addEvent(
       'change',
       '.theme-switch input[type="checkbox"]',

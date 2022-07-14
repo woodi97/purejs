@@ -1,7 +1,17 @@
 import { Component } from '@src/core/Component';
-import { ItemAppender, ItemFilter, Items } from '@components/common/Items';
+import { ItemAppender, ItemFilter, Items } from '@src/components/common/Items';
 
 export default class HomePage extends Component {
+  get filteredItems() {
+    const { isFilter, items } = this.$state;
+    return items.filter(
+      ({ active }) =>
+        (isFilter === 1 && active) ||
+        (isFilter === 2 && !active) ||
+        isFilter === 0,
+    );
+  }
+
   setup() {
     this.$state = {
       isFilter: 0,
@@ -51,16 +61,6 @@ export default class HomePage extends Component {
     new ItemFilter($itemFilter, {
       filterItem: filterItem.bind(this),
     });
-  }
-
-  get filteredItems() {
-    const { isFilter, items } = this.$state;
-    return items.filter(
-      ({ active }) =>
-        (isFilter === 1 && active) ||
-        (isFilter === 2 && !active) ||
-        isFilter === 0,
-    );
   }
 
   addItem(contents) {

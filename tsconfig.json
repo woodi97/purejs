@@ -8,18 +8,7 @@
     "moduleResolution": "node",
     "baseUrl": ".",
     "paths": {
-      "@src/*": ["./src/*"],
-      "@core/*": ["./src/core/*"],
-      "@containers/*": ["./src/containers/*"],
-      "@components/*": ["./src/components/*"],
-      "@context/*": ["./src/context"],
-      "@api/*": ["./src/core/api/*"],
-      "@data/*": ["./src/core/data/*"],
-      "@interface/*": ["./src/core/interface/*"],
-      "@hooks/*": ["./src/hooks/*"],
-      "@pages/*": ["./src/pagaes/*"],
-      "@css/*": ["./src/css/*"],
-      "@utils/*": ["./src/utils/*"]
+      "@src/*": ["./src/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.js", ".eslintrc.js"]
