@@ -3,6 +3,4 @@
 
 npx lint-staged
 
-yarn build
-
 git add -A

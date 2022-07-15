@@ -2,7 +2,9 @@
 node_modules
 
 # build path
-dist
+dist/app.css
+dist/index.html
+dist/index.js
 
 # yarn files
 yarn-error.log
