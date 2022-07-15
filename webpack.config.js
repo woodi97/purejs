@@ -33,11 +33,8 @@ module.exports = {
   },
   // HthmlWebpackPlugin: generate index.html which is including bundle.js using template
   plugins: [
-    new HtmlWebpackPlugin({ template: './public/index.html' }),
+    new HtmlWebpackPlugin({ template: './src/index.html' }),
     new MiniCssExtractPlugin({ filename: 'app.css' }),
-    new CleanWebpackPlugin({
-      cleanAfterEveryBuildPatterns: ['dist'],
-    }),
   ],
   // webpack devserver config
   devServer: {
@@ -49,8 +46,7 @@ module.exports = {
   },
   output: {
     filename: 'bundle.js',
-    path: path.resolve(__dirname, './build'),
+    path: path.resolve(__dirname, './public'),
     publicPath: '/',
-    clean: true,
   },
 };

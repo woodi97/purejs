@@ -2,8 +2,9 @@
 node_modules
 
 # build path
-build/
-!build/.keep
+public/app.css
+public/bundle.js
+public/index.html
 
 # yarn files
 yarn-error.log
