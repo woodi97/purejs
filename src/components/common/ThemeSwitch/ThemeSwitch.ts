@@ -1,7 +1,7 @@
 import { Component } from '@src/core/purifier/Component';
 import './ThemeSwitch.scss';
 
-export default class ThemeSwitch extends Component {
+export default class ThemeSwitch extends Component<unknown> {
   render() {
     return `
     <div class="theme-switch-wrapper">

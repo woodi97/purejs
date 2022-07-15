@@ -1,6 +1,6 @@
 import { Component } from '@src/core/purifier/Component';
 
-export default class ItemAppender extends Component {
+export default class ItemAppender extends Component<unknown> {
   render() {
     return `<input type="text" class="appender" placeholder="아이템 내용 입력" />`;
   }

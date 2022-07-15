@@ -1,6 +1,6 @@
 import { Component } from '@src/core/purifier/Component';
 
-export default class ItemFilter extends Component {
+export default class ItemFilter extends Component<unknown> {
   render() {
     return `
       <button class="filterBtn" data-is-filter="0">전체 보기</button>

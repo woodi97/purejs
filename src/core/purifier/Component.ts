@@ -1,32 +1,40 @@
-/* eslint-disable @typescript-eslint/no-empty-function */
-/* eslint-disable @typescript-eslint/ban-types */
-export class Component {
+export class Component<T> {
   $target;
   $props;
   $state;
-  constructor($target: HTMLElement, $props: {}) {
+
+  constructor($target: HTMLElement, $props: T) {
     this.$target = $target;
     this.$props = $props;
     this.setup();
     this.setEvent();
     this._draw();
   }
+
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   setup() {}
+
   // children components should be mounted in this method
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   mounted() {}
+
   render() {
     return '';
   }
+
   _draw() {
     this.$target.innerHTML = this.render();
     this.mounted();
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-empty-function
   setEvent() {}
-  setState(newState: {}) {
+
+  setState(newState: Record<string, unknown>) {
     this.$state = { ...this.$state, ...newState };
     this._draw();
   }
+
   addEvent(
     eventType: keyof GlobalEventHandlersEventMap,
     selector: string,

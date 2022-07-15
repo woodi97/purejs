@@ -32,6 +32,7 @@ module.exports = {
     'import/prefer-default-export': 'off',
     'import/extensions': ['off'],
     'no-new': 'off',
+    'no-empty-function': 'off',
     'class-methods-use-this': 'off',
   },
 };

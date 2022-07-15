@@ -1,6 +1,6 @@
 import { Component } from '@src/core/purifier/Component';
 
-export default class Items extends Component {
+export default class Items extends Component<unknown> {
   render() {
     const { filteredItems } = this.$props;
     return `
