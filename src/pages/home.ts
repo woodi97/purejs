@@ -1,4 +1,4 @@
-import { Component } from '@src/core/Component';
+import { Component } from '@src/core/purifier/Component';
 import { ItemAppender, ItemFilter, Items } from '@src/components/common/Items';
 
 export default class HomePage extends Component {

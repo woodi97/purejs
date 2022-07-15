@@ -16,7 +16,12 @@ module.exports = {
       },
       {
         test: /\.s[ac]ss$/i,
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'sass-loader',
+          'postcss-loader',
+        ],
       },
     ],
   },
@@ -39,12 +44,13 @@ module.exports = {
     static: {
       directory: path.join(__dirname, 'public'),
     },
-    compress: true,
-    port: 3000,
+    open: true,
+    port: 'auto',
   },
   output: {
-    filename: '[name].js',
-    path: path.resolve(__dirname, './dist'),
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, './build'),
+    publicPath: '/',
     clean: true,
   },
 };

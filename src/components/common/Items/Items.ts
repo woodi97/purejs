@@ -1,4 +1,4 @@
-import { Component } from '@src/core/Component';
+import { Component } from '@src/core/purifier/Component';
 
 export default class Items extends Component {
   render() {
