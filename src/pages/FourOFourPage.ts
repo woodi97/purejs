@@ -7,7 +7,7 @@ class FourOFourPage extends Component<any> {
       <div class="four-o-four">
         <h1>404</h1>
         <p>Page not found</p>
-        <div class="back-to-home"/>
+        <div class="back-to-home"></div>
       </div>
     `;
   }

@@ -24,7 +24,6 @@ export class BrowserRouter {
       (resource ? '/' + resource : '/') +
       (id ? '/:id' : '') +
       (verb ? '/' + verb : '');
-    console.log('parsedUrl', parsedUrl);
     const page = this.$routers[parsedUrl] || FourOFourPage;
     await new page(this.$target, {});
   }

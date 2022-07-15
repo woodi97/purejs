@@ -44,7 +44,7 @@ export class Component<T> {
     // if there are deep element inside selected element,
     // use closest()
     const isTarget = (target) =>
-      children.includes(target) || target.closest(selector);
+      children.length || children.includes(target) || target.closest(selector);
     this.$target.addEventListener(eventType, (event) => {
       if (!isTarget(event.target)) return false;
       callback(event);
